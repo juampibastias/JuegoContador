@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Juego Contador
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación web desarrollada en React que te permite jugar un juego de contador, donde debes hacer la mayor cantidad de clics en un botón en 5 segundos.
 
-## Available Scripts
+## Requisitos previos
 
-In the project directory, you can run:
+- Node.js instalado en tu máquina
 
-### `npm start`
+## Instrucciones de instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clona este repositorio en tu máquina local:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone [URL del repositorio]
+```
 
-### `npm test`
+2. Navega al directorio del proyecto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+cd JuegoContador
+```
 
-### `npm run build`
+3. Instala las dependencias del proyecto utilizando npm:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instrucciones de ejecución
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Una vez que todas las dependencias se hayan instalado correctamente, ejecuta el siguiente comando para iniciar la aplicación:
 
-### `npm run eject`
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. La aplicación se abrirá automáticamente en tu navegador predeterminado. Si no se abre automáticamente, puedes acceder a ella desde la siguiente URL: `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. En la página principal, verás dos botones: "Iniciar" y "Clickear". Al hacer clic en "Iniciar", comenzará una cuenta regresiva visualizada con los mensajes "Preparados", "Listos" y "Ya". Una vez que aparezca "Ya", podrás hacer clic en el botón "Clickear" durante 5 segundos para acumular puntos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. El tiempo restante se mostrará en la pantalla, junto con el puntaje actual. Intenta hacer la mayor cantidad de clics posible en 5 segundos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Después de que finalice el tiempo, se mostrará el resultado del juego, incluyendo la cantidad de clics que lograste y el puntaje máximo alcanzado. Si superas tu puntaje máximo anterior, aparecerá un efecto de confeti.
 
-## Learn More
+6. Para jugar nuevamente, simplemente haz clic en el botón "Volver a jugar".
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contribuir
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Si deseas contribuir a este proyecto, puedes seguir los siguientes pasos:
 
-### Code Splitting
+1. Haz un fork de este repositorio.
+2. Crea una rama con la nueva funcionalidad: `git checkout -b mi-nueva-funcionalidad`.
+3. Realiza los cambios necesarios y realiza los commits correspondientes: `git commit -m "Agrega mi nueva funcionalidad"`.
+4. Haz push a la rama creada en tu repositorio: `git push origin mi-nueva-funcionalidad`.
+5. Abre un Pull Request en este repositorio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Licencia
 
-### Analyzing the Bundle Size
+Este proyecto está bajo la Licencia MIT. Puedes ver más detalles en el archivo [LICENSE](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+Puedes copiar y pegar este README en un archivo `README.md` dentro de tu repositorio de GitHub. Asegúrate de personalizar las secciones según corresponda.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Espero que esto te sea útil. Si tienes alguna otra pregunta o necesitas más ayuda, no dudes en preguntar.
