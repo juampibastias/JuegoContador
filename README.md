@@ -7,7 +7,9 @@ Instrucciones de instalación
 Clona este repositorio en tu máquina local:
 bash
 Copy code
-git clone [[URL del repositorio]](https://github.com/juampibastias/JuegoContador.git)
+´´´
+git clone https://github.com/juampibastias/JuegoContador.git
+´´´
 Navega al directorio del proyecto:
 bash
 Copy code
