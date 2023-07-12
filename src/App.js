@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Confetti from "react-confetti";
 import "./App.css";
 
+// Importa los archivos de sonido
+import soundGameOver from "./sounds/JeepChrkeHornHonkS_PE894406.wav";
+import soundHighScore from "./sounds/we_ak47s_lb_04_hpx.wav";
+
 const App = () => {
   const [score, setScore] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
@@ -38,8 +42,10 @@ const App = () => {
             setMaxScore(scoreRef.current);
             maxScoreRef.current = scoreRef.current;
             setShowConfetti(true);
+            audioHighScoreRef.current.play(); // Reproduce el sonido de puntaje máximo
           } else {
             setShowConfetti(false);
+            audioGameOverRef.current.play(); // Reproduce el sonido de juego terminado sin puntaje máximo
           }
           setGameStatus("terminado");
         }, 5000);
@@ -72,9 +78,13 @@ const App = () => {
     };
   }, [countdown, isRunning, gameStatus]);
 
+  // Crea referencias para los elementos de audio
+  const audioGameOverRef = useRef(null);
+  const audioHighScoreRef = useRef(null);
+
   return (
     <div className="App">
-      <h1>Juego Contador</h1>
+      <h1>CounterArg</h1>
       <h2>Puntaje máximo: {maxScore}</h2>
       {!isRunning ? (
         <>
@@ -105,6 +115,10 @@ const App = () => {
           )}
         </>
       )}
+
+      {/* Agrega elementos de audio ocultos */}
+      <audio ref={audioGameOverRef} src={soundGameOver} />
+      <audio ref={audioHighScoreRef} src={soundHighScore} />
     </div>
   );
 };
