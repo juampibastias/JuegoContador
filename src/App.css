@@ -9,6 +9,13 @@ body {
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
 }
 
+.title{
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  color: #873E84;
+}
+
 h1 {
   font-size: 36px;
   color: #ffffff;

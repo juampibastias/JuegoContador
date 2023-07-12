@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import Confetti from "react-confetti";
 import "./App.css";
-
-// Importa los archivos de sonido
+import { TypeAnimation } from "react-type-animation";
 import soundGameOver from "./sounds/JeepChrkeHornHonkS_PE894406.wav";
 import soundHighScore from "./sounds/we_ak47s_lb_04_hpx.wav";
 
@@ -15,7 +13,6 @@ const App = () => {
 
   const scoreRef = useRef(0);
   const maxScoreRef = useRef(0);
-  const [showConfetti, setShowConfetti] = useState(false);
 
   const handleClick = () => {
     if (isRunning) {
@@ -41,10 +38,8 @@ const App = () => {
           if (scoreRef.current > maxScoreRef.current) {
             setMaxScore(scoreRef.current);
             maxScoreRef.current = scoreRef.current;
-            setShowConfetti(true);
             audioHighScoreRef.current.play(); // Reproduce el sonido de puntaje máximo
           } else {
-            setShowConfetti(false);
             audioGameOverRef.current.play(); // Reproduce el sonido de juego terminado sin puntaje máximo
           }
           setGameStatus("terminado");
@@ -57,7 +52,6 @@ const App = () => {
     setScore(0);
     setGameStatus("");
     scoreRef.current = 0;
-    setShowConfetti(false);
   };
 
   useEffect(() => {
@@ -84,7 +78,22 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>CounterArg</h1>
+      <TypeAnimation
+      className="title"
+        sequence={[
+          // Same substring at the start will only be typed out once, initially
+          "Counter",
+          1000, // wait 1s before replacing "Mice" with "Hamsters"
+          "CounterArg",
+          1000,
+          "CounterArg Juego",
+          1000,
+        ]}
+        wrapper="span"
+        speed={50}
+        style={{ fontSize: "4em", display: "inline-block" }}
+        repeat={Infinity}
+      />
       <h2>Puntaje máximo: {maxScore}</h2>
       {!isRunning ? (
         <>
@@ -93,7 +102,6 @@ const App = () => {
             <>
               <p>Clicks: {score}</p>
               <h2>Puntaje máximo: {maxScoreRef.current}</h2>
-              {showConfetti && <Confetti />}
               <button id="reset-button" onClick={resetGame}>
                 Volver a jugar
               </button>
